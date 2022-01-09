@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Piedra, papel o tijeras</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Primera Página - LOGIN -->
+  <section>
+    <div id="login-container" class="login-container">
+      <div class="orden-container">
+        <img id="portada" src="images/gatito.svg" />
+        <img id="michipun" src="images/michipun2.png" />
+        <form id="formLogin">
+          <label for="user" class="textLogin">Usuario:</label><br />
+          <input placeholder="Ingresa tu usuario" type="text" id="userLogin" class="inputLogin" /><br />
+          <label for="password" class="textLogin">Contraseña:</label><br />
+          <input placeholder="Ingresa tu contraseña" type="password" id="passwordLogin" class="inputLogin" /><br />
+          <button type="submit" id="btnLogin">Login</button>
+        </form>
+        <footer>
+          &copy;2022 Desarrollado por Tania Cariz, Escalab 2022.
+        </footer>
+      </div>
+    </div>
+  </section>
+
+  <!-- Segunda Página - GAME -->
+  <section>
+    <div id="game-container" class="game-container">
+      <div class="orden-container">
+        <img id="michipun" src="images/michipun.png" />
+
+        <div class="all-container">
+          <div class="top-row">
+            <div id="result">
+              <img src="images/piedra.svg" id="user-img" class="img-options" />
+              <p>¡Presiona una opción!</p>
+              <img src="images/piedra.svg" id="machine-img" class="img-options" />
+            </div>
+          </div>
+          <div class="center-row">
+            <button id="piedraUser" class="btn-selection">Piedra</button>
+            <button id="papelUser" class="btn-selection">Papel</button>
+            <button id="tijeraUser" class="btn-selection">Tijera</button>
+          </div>
+          <div class="bottom-row">
+            <h1>PUNTAJE</h1>
+            <div id="counter-container">asdasd</div>
+            <h2>Últimas jugadas</h2>
+            <ol id="list-score">
+              <li class="list-numbers">Ejemplo 1</li>
+              <li class="list-numbers">Ejemplo 1</li>
+              <li class="list-numbers">Ejemplo 1</li>
+              <li class="list-numbers">Ejemplo 1</li>
+              <li class="list-numbers">Ejemplo 1</li>
+            </ol>
+          </div>
+        </div>
+        <footer>
+          &copy;2021 Desarrollado por Tania Cariz, Escalab 2022.
+        </footer>
+      </div>
+    </div>
+  </section>
+  <script src="main.js" type="module"></script>
+</body>
+
+</html>

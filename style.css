@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500&family=Roboto:wght@100;300;400&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #fef1e6;
+}
+
+#portada {
+  max-width: 20%;
+}
+
+@media (max-width: 990px) {
+  #portada {
+    max-width: 40%;
+  }
+}
+
+#michipun {
+  width: 20%;
+}
+
+.login-container,
+.game-container {
+  height: 90vh;
+  width: 90%;
+  border-radius: 10px;
+  background-color: #bb8e8e;
+  background-image: url(images/Fondo.png);
+  background-repeat: repeat;
+  background-size: 70%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.orden-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+}
+
+@media (max-width: 990px) {
+  .login-container {
+    width: 90%;
+  }
+}
+
+h1 {
+  font-size: 1.25rem;
+  color: #3d3636;
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+}
+
+h2 {
+  font-size: 1rem;
+  color: #3d3636;
+  font-family: "Nunito", sans-serif;
+}
+
+.textLogin {
+  font-size: 1rem;
+  color: #252526;
+}
+
+.inputLogin {
+  margin: 0.5rem 0;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 5px;
+  width: 15rem;
+}
+
+#btnLogin {
+  width: 15rem;
+  background: #c25451;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 1rem;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+#btnLogin:hover {
+  background: #cf8381;
+}
+
+.btn-selection {
+  width: 10rem;
+  background: #c25451;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 1rem;
+  padding: 0.5rem;
+  margin: 1rem 0;
+  cursor: pointer;
+}
+
+.btn-selection:hover {
+  background: #cf8381;
+}
+
+.img-options {
+  width: 100px;
+}
+
+#result {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  color: #3d3636;
+  
+}
+
+.all-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.top-row,
+.center-row {
+  width: 100%;
+}
+
+.bottom-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#counter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15rem;
+  height: 2.5rem;
+  background: #fef1e6ad;
+  margin: 1rem 0;
+  border-radius: 10px;
+}
+
+#list-score {
+  color: #252526;
+}
+
+ol > li {
+  margin: 0.25rem 0;
+}
+
+footer {
+  font-size: 0.85rem;
+  text-align: center;
+  color: #252526;
+}
+
+#login-container {
+  display: none;
+}
+/* 
+#game-container {
+  display: none;
+}
+ */
