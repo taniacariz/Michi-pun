@@ -39,31 +39,28 @@
         <div class="all-container">
           <div class="top-row">
             <div id="result">
-              <img src="images/piedra.svg" id="user-img" class="img-options" />
-              <p>¡Presiona una opción!</p>
-              <img src="images/piedra.svg" id="machine-img" class="img-options" />
+              <img src="images/piedra.svg" id="userImg" />
+              <p id="resultText">¡Presiona una opción!</p>
+              <p id="score"></p>
+              <img src="images/piedra.svg" id="machineImg" />
             </div>
           </div>
           <div class="center-row">
-            <button id="piedraUser" class="btn-selection">Piedra</button>
-            <button id="papelUser" class="btn-selection">Papel</button>
-            <button id="tijeraUser" class="btn-selection">Tijera</button>
+            <button id="piedraUser" data-option="piedra" class="game-option btn-selection">Piedra</button>
+            <button id="papelUser" data-option="papel" class="game-option btn-selection">Papel</button>
+            <button id="tijeraUser" data-option="tijera" class="game-option btn-selection">Tijera</button>
           </div>
           <div class="bottom-row">
             <h1>PUNTAJE</h1>
-            <div id="counter-container">asdasd</div>
+            <div id="counterContainer"></div>
             <h2>Últimas jugadas</h2>
             <ol id="list-score">
-              <li class="list-numbers">Ejemplo 1</li>
-              <li class="list-numbers">Ejemplo 1</li>
-              <li class="list-numbers">Ejemplo 1</li>
-              <li class="list-numbers">Ejemplo 1</li>
-              <li class="list-numbers">Ejemplo 1</li>
             </ol>
+            <button id="close-session">Cerrar sesión</button>
           </div>
         </div>
-        <footer>
-          &copy;2021 Desarrollado por Tania Cariz, Escalab 2022.
+        <footer>scissors
+          &copy;2021 Desarrollado por Tania Cariz, Escalab 2022. 
         </footer>
       </div>
     </div>

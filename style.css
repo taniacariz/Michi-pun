@@ -30,7 +30,7 @@ body {
   height: 90vh;
   width: 90%;
   border-radius: 10px;
-  background-color: #bb8e8e;
+  background-color: #daafaf;
   background-image: url(images/Fondo.png);
   background-repeat: repeat;
   background-size: 70%;
@@ -114,7 +114,13 @@ h2 {
   background: #cf8381;
 }
 
-.img-options {
+.btn-selection:disabled {
+  background: #cf8381;
+  cursor: not-allowed;
+}
+
+#userImg,
+#machineImg {
   width: 100px;
 }
 
@@ -126,7 +132,6 @@ h2 {
   margin-bottom: 1rem;
   font-size: 1.25rem;
   color: #3d3636;
-  
 }
 
 .all-container {
@@ -172,10 +177,10 @@ footer {
 }
 
 #login-container {
-  display: none;
+  display: block;
 }
-/* 
+
 #game-container {
   display: none;
 }
- */
+ 
