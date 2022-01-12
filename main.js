@@ -139,6 +139,8 @@ function isPlaying() {
   return rounds < MAX_ROUNDS;
 }
 
+function endPoint() {}
+
 function counterScore(result) {
   if (result === WIN) {
     actualScore += WIN_VALUE;
@@ -158,8 +160,18 @@ function printResultList() {
   const listScore = document.getElementById("list-score");
   listScore.innerHTML = "";
   const result = JSON.parse(localStorage.getItem("result"));
+  var prueba = listScore.getElementsByTagName("li");
+
+  console.log(prueba);
+
   result.forEach((e) => {
     const newLi = document.createElement("li");
+    newLi.className += "element";
+
+    const lis = document.getElementsByClassName("element");
+    if (lis.length >= 5) {
+      lis[0].outerHTML = "";
+    }
     newLi.appendChild(
       document.createTextNode(
         `${e.userOption} - ${e.machineOption} - ${e.result} - ${e.actualScore}`
@@ -173,7 +185,7 @@ function closeSession() {
   localStorage.clear();
   window.location.href = "index.html";
 }
-
+8;
 document
   .getElementById("close-session")
   .addEventListener("click", closeSession);

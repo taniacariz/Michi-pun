@@ -98,7 +98,9 @@ h2 {
   background: #cf8381;
 }
 
-.btn-selection {
+.btn-selection,
+#replay-game,
+#close-session {
   width: 10rem;
   background: #c25451;
   border: none;
@@ -183,4 +185,20 @@ footer {
 #game-container {
   display: none;
 }
- 
+
+#score {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.651);
+  height: 2.5rem;
+  width: 5rem;
+  border-radius: 10px;
+  color: #c25451;
+  margin: 0.25rem;
+}
+
+.finalOptios {
+  display: flex;
+}
