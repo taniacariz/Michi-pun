@@ -8,21 +8,33 @@
 }
 
 body {
-  background: #fef1e6;
+  background: rgb(241 240 240);
 }
 
 #portada {
   max-width: 20%;
 }
-
 @media (max-width: 990px) {
   #portada {
-    max-width: 40%;
+    max-width: 50%;
   }
 }
 
 #michipun {
   width: 20%;
+}
+@media (max-width: 990px) {
+  #michipun {
+    width: 60%;
+    margin-bottom: 1rem;
+  }
+}
+
+#userPassContainer {
+  color: #3d3636;
+  font-family: "Nunito", sans-serif;
+  font-size: 0.85rem;
+  margin: -2rem;
 }
 
 .login-container,
@@ -67,6 +79,11 @@ h2 {
   font-size: 1rem;
   color: #3d3636;
   font-family: "Nunito", sans-serif;
+  margin: 1rem 0;
+}
+
+#formLogin {
+  margin-top: -3rem;
 }
 
 .textLogin {
@@ -121,9 +138,39 @@ h2 {
   cursor: not-allowed;
 }
 
+@media (max-width: 990px) {
+  .btn-selection {
+    width: 6rem;
+    background: #c25451;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    padding: 0.5rem;
+    margin: 1rem 0;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 990px) {
+  #replay-game,
+  #close-session {
+    width: 8rem;
+    font-size: 0.85rem;
+    height: 3rem;
+  }
+}
+
 #userImg,
 #machineImg {
   width: 100px;
+}
+
+@media (max-width: 990px) {
+  #userImg,
+  #machineImg {
+    width: 90px;
+  }
 }
 
 #result {
@@ -142,15 +189,29 @@ h2 {
   align-items: center;
 }
 
-.top-row,
+.top-row {
+  height: 7rem;
+  width: 100%;
+}
+
+@media (max-width: 990px) {
+  .top-row {
+    width: 90%;
+    margin-top: -2rem;
+  }
+}
+
 .center-row {
   width: 100%;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .bottom-row {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
 }
 
 #counter-container {
@@ -164,16 +225,38 @@ h2 {
   border-radius: 10px;
 }
 
+#resultText {
+  font-family: "Nunito", sans-serif;
+  font-size: 2rem;
+  width: 22rem;
+  color: rgb(61 54 54);
+  text-align: center;
+  font-weight: 700;
+  margin: 0 0.5rem;
+}
+
+@media (max-width: 990px) {
+  #resultText {
+    width: 10rem;
+    font-size: 1rem;
+  }
+}
+
+.scoreContainer {
+  height: 7rem;
+}
+
 #list-score {
   color: #252526;
 }
 
 ol > li {
   margin: 0.25rem 0;
+  text-transform: capitalize;
 }
 
 footer {
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   text-align: center;
   color: #252526;
 }
@@ -199,6 +282,9 @@ footer {
   margin: 0.25rem;
 }
 
-.finalOptios {
+.finalOptions {
   display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
 }

@@ -1,10 +1,14 @@
 // form login const
+
 const user = document.getElementById("userLogin");
 const pass = document.getElementById("passwordLogin");
 
 if (localStorage.getItem("result")) {
   nextPage();
 }
+
+
+// function login user
 
 formLogin.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -40,6 +44,8 @@ const results = {
   TIE: "Empate",
 };
 
+//variables
+
 const stone = "piedra";
 const paper = "papel";
 const scissors = "tijera";
@@ -60,6 +66,7 @@ const machineImg = document.getElementById("machineImg");
 const optionButtons = document.getElementsByClassName("game-option");
 
 // print values or set if does not exist
+
 if (!localStorage.getItem("result")) {
   localStorage.setItem("result", "[]");
 } else {
@@ -71,7 +78,6 @@ function changeImageOption(element, option) {
   element.src = `images/${option}.svg`;
 }
 
-//clicks btns
 Array.from(optionButtons).forEach((o) => {
   o.addEventListener("click", (e) => {
     const option = e.currentTarget.getAttribute("data-option");
@@ -79,6 +85,8 @@ Array.from(optionButtons).forEach((o) => {
     changeImageOption(userImg, option);
   });
 });
+
+//function start game and return user and machine options
 
 function startGame(userChoise) {
   const machineChoise = Math.floor(Math.random() * listChoices.length);
@@ -134,12 +142,16 @@ function resultChoice(userChoise, resultMachine) {
   }
 }
 
+//function max rounds
+
 function isPlaying() {
   const rounds = JSON.parse(localStorage.getItem("result")).length;
   return rounds < MAX_ROUNDS;
 }
 
 function endPoint() {}
+
+//counter score
 
 function counterScore(result) {
   if (result === WIN) {
@@ -161,13 +173,12 @@ function printResultList() {
   listScore.innerHTML = "";
   const result = JSON.parse(localStorage.getItem("result"));
   var prueba = listScore.getElementsByTagName("li");
-
-  console.log(prueba);
+  console.log("¿print?");
 
   result.forEach((e) => {
     const newLi = document.createElement("li");
     newLi.className += "element";
-
+    //delete one element if > 5 elements "li"
     const lis = document.getElementsByClassName("element");
     if (lis.length >= 5) {
       lis[0].outerHTML = "";
@@ -181,11 +192,19 @@ function printResultList() {
   });
 }
 
+document.getElementById("replay-game").addEventListener("click", replay);
+document
+  .getElementById("close-session")
+  .addEventListener("click", closeSession);
+
+//function replay, clear result and score
+function replay() {
+  localStorage.setItem("result", "[]");
+  window.location.reload();
+}
+
+//function close, clear localStorage and reload page
 function closeSession() {
   localStorage.clear();
   window.location.href = "index.html";
 }
-8;
-document
-  .getElementById("close-session")
-  .addEventListener("click", closeSession);
